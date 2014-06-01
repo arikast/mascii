@@ -1,0 +1,11 @@
+"key:C+M tempo:160 instrument:1 feel:90 "  
+"key:C+M tempo:160 instrument:1 feel:90 "  
+
+| . G5 A G F++ G c e d c d c B+ c e g |
+| (C G c e c G) (E G c e c G)|
+
+| . G A G F++ G c e d c d c B+ c e g |
+| (C G c e c G) (E G c e c G)|
+
+| (. A c d) (f a c >d) (b a g f) (e d f c) | (B+ d A G) (F A E D) (f <c B+ d) (c G B= A)|
+| D A c f c A F c d a d c | G <d f b+ f d G d f b f d |

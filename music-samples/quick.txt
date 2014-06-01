@@ -1,0 +1,3 @@
+"instrument:53" | (g f)		e 	| g f		e .	|
+"instrument:22" | e (d c d) c .		| (e f e) (d . e) c .	|
+"instrument:33" | <c g 		e f	| (g 	G)	c	|

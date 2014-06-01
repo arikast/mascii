@@ -1,0 +1,8 @@
+"key:-d tempo:65 instrument:0"  
+"key:-d tempo:65 instrument:0"
+
+"1" 		|  [f5  d] A! * B  | c! (* d)|
+"feel=60"	|  (D4 A d!f! A A A* df A) | (e!g! A A A B A* df A)	|
+	
+	
+	

@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <title>all about mascii</title>
+    <link href="css/main.css" media="screen" rel="stylesheet" type="text/css" />
+    </style>
+  </head>
+  <body>
+<h1>Quickstart By Example</h1>
+<P>Three Blind Mice:
+</P>
+<a href="resources/quick1.mid" class="listen">Listen</a>
+<pre class="masciicode">
+| e d c . | e d c . | g f e . | g f e . |
+</pre>
+
+<P>Notes are named "a" through "g" using a standard musical scale.  The vertical pipe | character separates measures, and the dot . indicates a rest.
+</P>
+<P>Any notes touching each other are played simultaneously:
+</P>
+<a href="resources/quick2.mid" class="listen">Listen</a>
+<pre class="masciicode">
+| eg df ce . | eg df ce . |
+</pre>
+
+<P>You can change up or down an octave using &gt; or &lt;.  This change then applies to all subsequent notes.
+</P>
+<a href="resources/quick3.mid" class="listen">Listen</a>
+<pre class="masciicode">
+| e d c . | &lt;e d c . | &gt;g f e . | &lt;g f e . |
+</pre>
+
+<P>Lowercase letters play as written, while CAPITAL letters play an octave lower than written:
+</P>
+<a href="resources/quick4.mid" class="listen">Listen</a>
+<pre class="masciicode">
+| e d c . | E D C . | g f e . | G F E . |
+</pre>
+
+<P>Numbers can also be used to specify an exact octave, which then applies to all subsequent notes:
+</P>
+<a href="resources/quick5.mid" class="listen">Listen</a>
+<pre class="masciicode">
+| 4e d c . | 3e d c . | 4g f e . | 3g f e . |
+</pre>
+<p>The dividing line where one octave ends and the next one starts is between "b" and "c".  In other words, 3b and 4c are right next to each other.  While this may seem an arbitrary (and even silly) place to divide octaves, this is for better or worse the standard convention used in Western music notation, and Mascii has adhered to that standard in this case.</p>
+
+<P>+ after a note indicates a sharp, while - means flat (and = means natural).  Here's the same tune in D using sharps:
+</P>
+<a href="resources/quick6.mid" class="listen">Listen</a>
+<pre class="masciicode">
+| f+ e d . | f+ e d . |
+</pre>
+
+<P>You could also specify a key signature to automatically sharp/flat the relevant notes:
+</P>
+<a href="resources/quick7.mid" class="listen">Listen</a>
+<pre class="masciicode">
+"key:D" | f e d . | f e d . |
+</pre>
+
+<P>A musical part can continue onto another line by adding an empty line in between:
+</P>
+<a href="resources/quick8.mid" class="listen">Listen</a>
+<pre class="masciicode">
+| e d c . | e d c . |
+
+| g f e . | g f e . |
+</pre>
+
+<P>If you do not put an empty line in between, then they are played simultaneously:
+</P>
+<a href="resources/quick9.mid" class="listen">Listen</a>
+<pre class="masciicode">
+| e d c . | e d c . |
+| g f e . | g f e . |
+</pre>
+
+<P>Every element in a measure gets an equal share of the measure's time.  Elements are separated by spaces.  Since each measure above has four elements (three notes and one rest), each element received 1/4 of the measure's time, and could therefore be considered quarter notes (and a quarter rest).  
+</P>
+<P>Similarly, these are half notes, because each measure contains two elements, so each gets 1/2 of the measure's time.
+</P>
+<a href="resources/quick10.mid" class="listen">Listen</a>
+<pre class="masciicode">
+| G C | G C |
+</pre>
+
+<P>Putting them together we have:
+</P>
+<a href="resources/quick11.mid" class="listen">Listen</a>
+<pre class="masciicode">
+| e d c . 	| e d c . 	|
+| G C 		| G C 		|
+</pre>
+
+<P>Vertical alignment of measure lines like this is not required but it looks pretty.
+</P>
+<P>To achieve differently proportioned rhythms, elements can be grouped together using parentheses:
+</P>
+<a href="resources/quick12.mid" class="listen">Listen</a>
+<pre class="masciicode">
+| (e d) c | (e d) c |
+</pre>
+
+<P>Elements grouped in parentheses count as a single element in the rhythmic scheme.  After grouping, each measure above now has just two elements at the top level: (e d) and c.  Therefore the measure's time is divided in two, giving 1/2 its time to the (e d) element, and 1/2 its time to the "c".  The "c" therefore becomes a half note, while the (e d) further divides its time evenly among all its elements.  Since there are two elements inside, they each get half of its time, so that means they effectively become quarter notes, because 1/2 of 1/2 is 1/4.
+</P>
+<P>Triplets or any other division are just as easily expressed:
+</P>
+<a href="resources/quick13.mid" class="listen">Listen</a>
+<pre class="masciicode">
+| e (d c d) c . | (e f e) (d . e) c . |
+</pre>
+
+<P>Putting together a few parts and changing the instruments we have:
+</P>
+<a href="resources/quick14.mid" class="listen">Listen</a>
+<pre class="masciicode">
+"instrument:53" | g f		e .	| g f		e .	|
+"instrument:22" | e (d c d) c .		| (e f e) (d . e) c .	|
+"instrument:33" | &lt;c g 		e f	| (g 	G)	c	|
+</pre>
+
+<P>So far the examples have only grouped together simple notes, but groups can also include other groups and rests to produce a full spectrum of complex rhythms, some of which might be difficult to express using traditional notation.
+</P>
+<P>Brackets may be used instead of parentheses as a shortcut to indicate a dotted rhythm:
+</P>
+<a href="resources/quick15.mid" class="listen">Listen</a>
+<pre class="masciicode">
+| e [d d] c . | [e f] [d e] c . |
+</pre>
+
+<P>Slash chords, aka pop/jazz chords, are also supported:
+</P>
+<a href="resources/quick16.mid" class="listen">Listen</a>
+<pre class="masciicode">
+| &gt;eg e-g- df fa	| eg df ce .	|
+| &lt;c/     dm7/f		| g7	c8/	|
+</pre>
+
+<P>For full details about mascii, see the <a href="index.html" class="listen">full documentation</a>
+</P>
+<div id="footer">
+(c) 2009 Ari Kast.  Questions?  Write to inf<!-- no spam -->o<!-- no spam -->@<!-- no spam -->ma<!-- no spam -->scii<!-- no spam -->.<!-- no spam -->or<!-- no spam -->g
+</div>
+  </body>
+</html>

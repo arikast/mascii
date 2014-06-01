@@ -1,0 +1,250 @@
+"orig:53 key:d tempo:80	volume:80	instrument:53 feel:90 oboe"  
+"orig:37 key:d 			volume:90 instrument:38 feel:60 violin"  
+"orig:56 key:d 			volume:70 instrument:22 feel:90 soprano"  
+"orig:22 key:d 			volume:100 instrument:23 feel:85 bass"  
+"orig:18 key:d 			volume:95 instrument:33 feel:90 continuo"  
+
+| . | . |
+| . d d d f d f d a A A A a A a A | a B B B a B a B g B B B g B g B |
+| . | . |
+| . | . |
+| . 3d D d . c A c | . d B d . e E e |
+
+| . | . |
+| g c c c g c g c f d d d g d a d | b d a d b d >c D d D D D d E d E |
+| . | . |
+| . | . |
+| . A c A . d e f | g f g a b a g+ e | 
+
+| . | . |
+| c E E E c= F c F <b g b g B g B g | a g a g c g c g a f a f d f d f |
+| . | . |
+| . | . |
+| a g= f d g f e d | c B A c d e f (g a) |
+
+| . | . |
+| g f g f e g d g c g B g A g f e | (d A f d) (a f >d <a) (f a f d) (a A) |
+| . | . |
+| . | . |
+| b a g f e d c (d e) | (f A d A) (f d a f) (>d <a f d) (a A) |
+
+| . 										| 5d (d d) |
+| d . . . 									| (. d d d) (f d f d) (a A A A) (a A) |
+| . 										| 5d (d d) |
+| (. (d c)) (d e f g) (a g+ a b) (>c d e c) | (d (c B)) (A B A G=) (F G E G) (F E F D) |
+| D d D d . c A c 							| (. (B c) d e) (f a f d) | 
+
+| A! (* B A B) c! (* (d c) B c) 			| (d f e d) (c B A B) (c B c B c B c B c) (B (A B)) | 
+| (. >A A A) (c A c A) (e E E E) (e E) 		| . | 
+| A! (* B A B) c! (* (d c) B c) 			| (d c) [B A] |
+| (<e A) e! (* f e f) (g f g e) 			| (f g+ f g) (a g a e) (f! * g (a b)) [g a] |
+| c (e d) c B A (G F) E A 					| D E F c d B e E |
+
+| A 								| . | 
+| . 4A A A d A e A f A e A f A g+ A | a A A A a B a B g= B B B g c g c | 
+| A 								| . |
+| [a g+] (f e d c) (B a) ((a g) >d) | (d c) (. (B D+)) (E (F G)) (A C) |
+| A A B c d c d e 					| A (a f) d+ B e d= c A |
+
+#p.228 bar 16
+| . d 								| (c (e d) e f) (B d c (B A)) [A (B c=)] [B (c+ d)] | 
+| >F D A F d A d A F D D D F D F D  | (<a A) . . . | 
+| . d 								| c [B A] A [B (c d)] |
+| D= C D E F E F G A G F G A G A B 	| (<e f!) ((* b) g!) ((* e) f!) (* B e d) |
+| d (A G) F A D d c B 				| A c d e c d G (g f) |
+
+| [G A] (F E D E) (F (A G) A B) [E D] 				| D 									| 
+| . 												| . >D D D G D A D B D A D B D c D 		| 
+| (G e!) (* (d c) d B) ((A d c B) (A G)) (F (E D)) 	| D 									|
+| (c (B A)) (d e f g) [a d] c 						| (>D (F A)) (d F) (G (A B)) (A G F G) 	|
+| e a b (a g) f g a A 								| d c= B A G F G A 						|
+
+| . 								| . 											| 
+| d D D D d E d E c E E E c= F c F 	| <b g b g B g B g a g a g c g c g 				| 
+| . 								| . 											|
+| (F A G+ A) B! (* d c B) A! 		| (* c= B A) (G F E D) ((<c+ B) A!) (* c e g) 	|
+| B A G+ E A G= F D 				| G F E e f g f e 								|
+
+#bar 22
+| . | . | 
+| a f a f d f d f g f g f e g d g 			| c g B g A g f e d A f d a f >d <a | 
+| . | . |
+| (f b a g) (f e d c) ((B A) G!) (* d c B) 	| (e a g f ) ( e d c B) (A (d c)) (>D F A c) |
+| d e f (g a) b a g f 						| [e d] (c B A G) (F A d A) (f d a f) |
+
+| . (. 5D E F G A B c) 			| d (d d) | 
+| (f a f d) (a A) d . 			| (. d d d) (f d f d) (a A A A) (a A) | 
+| . 							| d (d d) |
+| (d (c B) A B) E D . 			| . <A B c d c d e f e d e f e f g+ |
+| (>d A F D) (<a A) (d c=) (B G)| (D .) (. f e d)|
+
+| A! (* B A B) c! (* (d c) B c) | (d f e d) (c B A B) (c B c B c B c) (B (A B))| 
+| (. a a a)  (c a c a) (>e E E E) (e E) | . | 
+| A! (* (A B)) c! (* (d c) B c) | d (c d) (c B c B c B c) (B A) |
+| (a A) e! (* d e f) (g= f g e) | (f e f g+) (a g a e) (f (g (a b))) [g a] |
+| (c d c B) (A (G F) E A)| D E F c d B e E |
+
+#p229 bar 28
+| A | . | 
+| . <A A A d A e A f A e A f A g+ A | a A A A a B a B g= B B B g c g c |
+| A | . |
+| [a g+] (f e d c) (B a) ((a g) >d) | d c . (B D+) E (F G) A C| 
+| A A B c d c d e | A (a f) d+ B e d= c A |
+
+| . d 								| (c (e d) e f) (B d c (B A)) [A (B c=)] [B (c+ d)] | 
+| f d a f >d A d A F D D D F D F D 	| (A <A) . . . | 
+| . d 							   	| c [B A] A [B (c d)] |
+| D= C D E F E F G A G F G A G A B 	| (E A!) ((* B) G!) ((* E) F!) (* <B e d) |
+| d (A G) F A D d c B 				| A c d e c d G (g f) |
+
+| [G A] (F E D E) (F (A G) A B) [E D] 				| D | 
+| . | . d d d g d a d b d a d b d >c D 				| 
+| (G e!) (* (d c) d B) ((A d c B) (A G)) (F (E D)) 	| D |
+| (c (B A)) (d e f g) [a d] c 						| (d (f a)) (>d F) (G (A B)) (A G F G) |
+| e a b (a g) f g a A 								| d c= B A G F G A |
+
+#1/2 way down 229, bar 34#
+| . | . | 
+| d D D D d E d E c E E E c= F c F | B G B G <B g B g a g a g c g c g | 
+| . | . |
+| (F A G+ A) B! (* d c B) A! | (* c= B A) (G F E D) ((C+ <B) A!) (* c e g) |
+| B A G+ E A G= F D | G F E e f g f e |
+
+| . | . | 
+| a f a f d f d f g f g f e g d g  | c g B g A g f e d A f d a f >d A |
+| . | . | 
+| (f b a g) (f e d c) ((B A) G!) (* d c B) | (e a g f) (e d c B) (A (d c)) (d f a >c) |
+| d e f (g a) b a g f | [e d] (c B A G) (F A d A) (f d a f) |
+
+| . . D! (* E D E) 						| F! ([* G+] [(A G A G) (F G)]) [A (B c)] (B d c B) | 
+| (F A F D) (A <A) (d d d d) (f d f d) 	| (a A) . . . | 
+| . . D! (* E D E)						| F! (* G+) [A (B c)] (B A) |
+| (d (c B) A B) E D . 					| A F D B C E G+ A |
+| (>d A F D) (<a A) (D (F G)) (A (B c)) | d c d B c B c A |
+
+#p. 230, bar 40#	
+| (A G+ F G) [G A] A! * | . | 
+| . . (. >A A A) (c A c A) | e E E E e E e E e F F F e F e F | 
+| A G+ A! * | . |
+| (<B b!) (* >d c d) (d c) (. c)  | [B (c d)] (c B) A! (* G+ F G) |
+| B A B E A a A a | . g+ e g . f F f |
+
+| . | . | 
+| d F F F d F d F d G+ G G d G d G | c <A A A d A e A f A e A f A g+ A | 
+| . | . |
+| (A G+) A B (c B) G! * . . | . (G+ A) [<B c] ((d (e f)) e) |
+| . B d B . e E e | . A B c d c B e |
+
+| . 									| . D | 
+| a A A A a B a B g= B B B g c g c 		| f d d d g d a d b d a d b d >c D | 
+| . 									| . D |
+| (c (B A)) f! (* (b g=)) ((f e!) .) 	| (* d) (e f) [g f] ((g (a b)) a) |
+| f a d+ B e g c A 						| d= f B A G d g (f e) |
+
+#bar 46#
+| (A G F G) (A B G A) (B c B c) [(d c d c) (B c)] 	| d . | 
+| (d D) . . . 										| . <B B B e B f B g B f B g+ B a+ B | 
+| A ([B c] [c d])									| d . |
+| f! 												| [* b] (a+ b a b) (c d e g) (f e d c) |
+| d e f e d (c B) A+ F 								| B d c B e d e f |
+
+| . 							| . c | 
+| (b B) . . . 					| . >E E E A E B E c E B E c E d E  | 
+| . 							| . c |
+| d (c B) b >d G+ (F E) A (c B) | (B (d c)) (B A G+ F) E! (* A G+ A) |
+| B c d B e d c A 				| e E F G+ A G A (B c) |
+
+| (d (e f) e d) (c B A B) (c B c B c B!) (* (A B)) | A | 
+| (e E) . . . | . <A A A d A e A f A e A f A g+ A | 
+| (d c) [B A] | A |
+| (B E) A! (* G+ A F) [G A] | A (A C) (D (E F)) ((E D) E) |
+| G+ e f c d B e E | A (a g) f e d c d e |
+
+#p. 231 bar 52#
+| . 								| . | 
+| a A A A a B a B g= B B B g c g c 	| f d d d f >d F d E C C C E c E c | 
+| . 								| . |
+| <A . . . 							| a f d b c e g+ a  |
+| A c d+ B e d= c A 				| d c d B c B c A |
+
+| . | . B! | 
+| D e d c B d G B E d c B A+ c F A | (B <B d B) (f d b f) (d f d B) (f f) | 
+| . | . B |
+| (B d) ((g= f) g) A+ (. >c) | d c B A G+ A B G |
+| B b e (E F) G E F f | B c d c B c d B |
+
+| (* d c B) ((A G+) A!) (* (B c=) B A) ((A G= A G A G!) (* (F G)))	| F | 
+| B . . . 								| . f f f b f >c F d F c F d F e F | 
+| B (A (B c=)) [B A] G 					| F |
+| E+ (F (G+ A)) [<B c] ((d (e= f)) e) 	| (c F) f! . (* (b a+)) |
+| G+ c f e d+ B e c 					| A+ F G+ A B A B c |
+
+#2nd half, p 231 bar 58#
+| . | . | 
+| (f F) . . . | . C C C F C G+ C A C G C A C B C | 
+| . | . |
+| [b a] (g+ (a b)) (e+ (d+ c)) (f (a g+)) | (g+ (b a)) (g f e+ d+) c! (* f e f)  |
+| d c B G+ c B A= F | c C D+ E+ F E F (G+ A) |
+
+| . | . | 
+| (c C) . . . | . C C C F C G+ C A <A A A a A a A | 
+| . | . |
+| (g+ c) >c (. (d c) (B c) d) [G F] | F . . . |
+| (C c e+ c) (f c g+ c) (a c b c) (>c C) | <f c A c F f F f |
+
+| . | . | 
+| a B B B a B a B g= B B B g B g B | g c c c g c g c f d d d g d a d | 
+| . | . |
+| . | . |
+| . d+ B d . e E e | . c A c . d e f |
+
+#p 232 bar 64
+| . 5d | (c c=) B | 
+| b d a d b d >c D d D D D d D d D | c E E E c= F c F B G B G <B g B g | 
+| . d | (c c=) B | 
+| . . (. (D C)) (D E F G+)| (A E) A! (* D) (G= (F E)) |
+| g f g a b B b e | a g f d g f e g |
+
+| [A B] | [G F] | 
+| a g a g c g c g a f a f d f d f  | g f g f e g d g c g B g A f e d | 
+| [A B] | [G F] | 
+| (C (<B A)) (. (a g)) (f e d e) (f a g a)| [b a] (g f e d) (a (>c A)) (d D) |
+| a c A c d c B (g f) | e E F G A (B c) d G |
+
+| (E d c B) (A G F E) (F G A B) [E D] | D! | 
+| (a A) . . . | . | 
+| (E d!) (* c d e) [A G] (F (G E))| D! |
+| (C <A B c) (d e f g) (a b >c d) [c (B c)] | [d c=] (B A) (G (F G)) A |
+| g (. G) (F G) (A a) | d >d c= d B d A d G d F d G d A c+ |
+
+#bar 70
+| * . . . | . | 
+| . d d d f d f d a A A A a A a A | a B B B a B a B g B B B g B g B | 
+| * . . . | . |
+| D . . . | . |
+| D D <D d . c A c | . d B d . e E e |
+
+| . | . | 
+| g c c c g c g c f d d d g d a d | (b d a d) (b d >c D) (d D D D) (d E d E) | 
+| . | . |
+| . | . |
+| . A c A . d e f | g f g a b a g+ e |
+
+| . | . | 
+| c E E E c= F c F B G B G <B g B g | a g a g c g c g a f a f d f d f  | 
+| . | . |
+| . | . |
+| a g= f d g f e d | c B A c d e f (g a) |
+
+| . | . | 
+| g f g f e g d g c g B g A g f e | (d A f d) (a f >d A) (F A F D) (A <A) | 
+| . | . |
+| . | . |
+| b a g f e d c (d e) | (f A d A) (f d a f) (>d A F D) (A <A) |
+
+| . |  
+| d . . . |  
+| . | 
+| . | 
+| d . . . | 
+

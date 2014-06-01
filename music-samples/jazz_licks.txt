@@ -1,0 +1,9 @@
+"tempo:120 feel:80"
+
+5| . (eg . eg) d+f+ d=f=|  
+
+ce 4(e g e)c (df .) [d+f+ (f= f+)] | ge . |
+
+| (. (. F F+)) (EG c G) (D+F+ . c) D=F= | CE . |
+
+| (. G) ((d+g! e* .) fa) ((eg c) G) (Fc D+c!)| [E* >(E! F F+)] ((G c) G*) (D+F+ c) (D=F= C!E!)|* .  |

@@ -1,0 +1,50 @@
+"tempo:200 key:D feel:80 time:4/4 volume:120"
+"tempo:200 key:D feel:30 time:4/4 volume:90"
+
+. . . (. . 6f)	|
+. 				|
+
+| (e f e) (d . d) (B d B) (A . A) 	| (F A F) (E . CA) (. . <A) (. . 6f) |
+| 3F >FAd <F= >F=G+Bd 				| <E G= >G=Ac <G | 
+
+| (e f e) (d . d) (B d B) (A . A) 	| (F A F) (E . CA) (. . <A) (. . 6f) |
+| 3F >FAd <F= >F=G+Bd 				| <E G= >G=Ac <G | 
+
+| (e f e) (d . d) (B d B) (A . A)	| (F A F) (E . F) (E F E) (C . F) |
+| 3F >FAd <F= >F=G+Bd 				| <E >Ace <C >Ace | 
+
+
+| (E F E) (D . D) (C D C) (<B . e) 	| (c e c) (B . ca) (. . A) (. . 6f) |
+| <<B >>G+de <<E >>G+de 			| <Aa Gg >Ace <Gg |
+
+| (e f e) (d . d) (B d B) (A . A) 	| (F A F) (E . CA) (. . <A) (. . f) |
+| 3F >FAd <F= >F=G+Bd 				| <E G= >G=Ac <<A | 
+
+		 | (e f e) (D . f) (e f e) (D . f) 	| (e f e) (D . f!a!) (* . e!g!) (* . a) |
+"feel:90"| >Df Eg F=g+ [F+a G=!]   "feel:30"| *b [>GBd <G] *b- [>GBd <F!] |
+
+|(A! * B) (c! * a) (f! * A) (c! * e)| (d e d) (A . a!) (* . A!) (* . 6f) |
+| [*a F=!] *g+ [>GBd <E!] [*g= D!] 	| *f >FAd <<A >>GAc |
+
+"repeat phrase"
+| (e f e) (d . d) (B d B) (A . A) 	| (F A F) (E . CA) (. . <A) (. . 6f) |
+| 3F >FAd <F= >F=G+Bd 				| <E G= >G=Ac <G | 
+
+| (e f e) (d . d) (B d B) (A . A) 	| (F A F) (E . CA) (. . <A) (. . 6f) |
+| 3F >FAd <F= >F=G+Bd 				| <E G= >G=Ac <G | 
+
+| (e f e) (d . d) (B d B) (A . A)	| (F A F) (E . F) (E F E) (C . F) |
+| 3F >FAd <F= >F=G+Bd 				| <E >Ace <C >Ace | 
+
+
+| (E F E) (D . D) (C D C) (<B . e) 	| (c e c) (B . ca) (. . A) (. . 6f) |
+| <<B >>G+de <<E >>G+de 			| <Aa Gg >Ace <Gg |
+
+| (e f e) (d . d) (B d B) (A . A) 	| (F A F) (E . CA) (. . <A) (. . f) |
+| 3F >FAd <F= >F=G+Bd 				| <E G= >G=Ac <<A | 
+
+		 | (e f e) (D . f) (e f e) (D . f) 	| (e f e) (D . f!a!) (* . e!g!) (* . a) |
+"feel:90"| >Df Eg F=g+ [F+a G=!]   "feel:30"| *b [>GBd <G] *b- [>GBd <F!] |
+
+|(A! * B) (c! * a) (f! * A) (c! * e)| (d e d) (A . a!) (* . A!) (* . 6f) |
+| [*a F=!] *g+ [>GBd <E!] [*g= D!] 	| *f >FAd <<A >>GAc |

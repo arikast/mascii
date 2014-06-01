@@ -1,0 +1,3 @@
+"tempo:120 feel:80"
+
+| (. G) ((d+g! *e .) fa) ((eg c) G) (Fc D+c!)| [*E >(E! F F+)] ((G c) *G) (D+F+ c) (D=F= C!E!)|* .  |

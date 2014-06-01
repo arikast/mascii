@@ -1,0 +1,54 @@
+body {
+    padding: 2em;
+    background-color: white;
+    font-family: "Lucida Grande", "Bitstream Vera Sans", "Verdana";
+    font-size: 14px;
+    color: black;
+}
+
+h1 {
+    color: darkblue;
+}
+
+a  {color: #03c}
+
+a:hover {
+    background-color: #03c;
+    color: white;
+    text-decoration: none;
+}
+
+.masciicode {
+    font-family:courier new;
+    background-color: #DDD;
+    margin:1em;
+}
+
+#header {
+    border-bottom: 1px solid black;  
+    color:darkgreen;
+    font-size:250%;
+    font-weight:bold;
+}
+
+#footer {
+    margin-top:2em;
+    border-top: 1px solid black;  
+    color:darkgreen;
+    font-size:90%;
+}
+
+h1 {
+    font-weight:normal;
+}
+
+h3 {
+    border-bottom: 1px solid black;  
+}
+
+dt {
+    font-weight:bold;
+    margin-top:.25em;
+}
+  
+

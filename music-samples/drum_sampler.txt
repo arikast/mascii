@@ -1,0 +1,15 @@
+"feel:90 instrument:36 channel:10"
+
+1| c c+ d d+ | e f f+ g | g+ a a+ b b+| 
+
+2| c c+ d d+ | e f f+ g | g+ a a+ b b+| 
+
+3| c c+ d d+ | e f f+ g | g+ a a+ b b+| 
+
+4| c c+ d d+ | e f f+ g | g+ a a+ b b+| 
+
+5| c c+ d d+ | e f f+ g | g+ a a+ b b+| 
+
+6| c c+ d d+ | e f f+ g | g+ a a+ b b+| 
+
+7| c c+ d d+ | e f f+ g | g+ a a+ b b+| 

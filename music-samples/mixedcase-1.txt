@@ -1,0 +1,6 @@
+"key:fm tempo:200 instrument:0"| . . . 5c | (c d . B) (c e D) (C d B) (c f+ g)  |
+"key:fm tempo:200 instrument:12"|     .    | ( . 3e 4g C)         (B- g C)	    |
+
+| (C d >B) (c e D) (C d B) (c a F)  | (>E f E) (D+ e g) (b c B) (>A b d-) |
+| (3F 4a C)         (3A- a C)			| (3G b >E) (D- b E) |
+

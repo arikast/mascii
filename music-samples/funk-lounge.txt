@@ -1,0 +1,30 @@
+"tempo:100 feel:90 key:DM instrument:72"
+"feel:70 key:DM instrument:43"
+"feel:100 key:DM instrument:36"
+"feel:90 key:DM instrument:36 channel:10"
+"feel:90 key:DM instrument:36 channel:10"
+
+ | .								| . |
+ | .      5fA . fA  				| . [fA f!A!] (* e!G!) *|
+ | (2D d) [. A] (c c) [. F] 	    | (B B) (. G . G+) (A G=) (F E)|
+ | . a a a a a a a 					| . a a a a a a a |
+ | 2c . . . c c . . . . . c . . . . | c . . . c c . . . . . c . (4c c) c c |
+
+ | .								| . . (. f d d) (f d g f)|
+ | .      fA . fA  					| . [fA f!A!] (* e!G!) *|
+ | (2D d) [. A] (c c) [. F] 		| (B B) (. G . G+) (A G=) (F E)|
+ | . a a a a a a a 					| . a a a a a a a |
+ | 2c . . . c c . . . . . c . . . . | c . . . c c . . . (4c c) c c . c c 2c |
+
+ | (g+ a >c A) . (. A c A) (d c . <a)	| ~[ ((a- g) f d c) (. ~[ g+ a= ] ~[ g a ] ~[ g a ]) ] |
+ | .      fA . fA  						| . [fA f!A!] (* e!G!) *|
+ | (2D d) [. A] (c c) [. F] 			| (B B) (. G . G+) (A G=) (F E)|
+ | . a a a a a a a 						| . a a a a a a a |
+ | 2c . . . c c . . . . . c . . . . 	| c . . . c c . . . . . c . (4c c) c c |
+
+ | (g c d c) (f c g a) (. f g f) (a g >c d) | (. c d c) (f d . A!) (* G) (F G) |
+ | .      fA . fA  							| . [fA f!A!] (* e!G!) *|
+ | (2D d) [. A] (c c) [. F] 				| (B B) (. G . G+) (A G=) (F E)|
+ | . a a a a a a a 							| . a a a a a a a |
+ | 2c . . . c c . . . . . c . . . . 		| c . . . c c . . 4c (c c) c d+ c c c 2c |
+

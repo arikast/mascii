@@ -1,0 +1,189 @@
+grammar Mascii  
+  rule top
+    measures {
+
+      #def trigger_prop_timings        
+      #  propagate_timings 0, 1920
+      #  #propagate_timings 0, 1440
+      #end
+
+    }
+  end
+  
+  # used as top entry point (root) when no barlines provided.  
+  # each top level unit then functions like its own measure
+  rule free_form
+    (metaremarks? space? composite+ space?)+ {
+
+      def propagate_timings(context, time_start, time_length)
+            split_measures context, time_start, time_length
+      end
+	
+	}
+  end
+  
+  rule measures
+    measure_node:(measure)+ barline? {
+
+      def propagate_timings(context, time_start, time_length)
+            measure_node.split_measures context, time_start, time_length
+      end
+
+    }
+  end
+
+  rule measure
+    empty_measure* metaremarks? space? ((composites space? barline?) / (barline? composites))
+  end
+
+  #todo: check to make sure 2nd set of metaremarks are not ignored
+  rule empty_measure
+    metaremarks? space? barline space? metaremarks? space? &barline
+  end
+  
+  rule composites
+      even_composites / reverse_dotted_composites / dotted_composites
+  end
+
+  rule even_composites
+    space? comps:(composite+ space?)+ {
+
+		def propagate_timings(context, time_start, time_length)
+			comps.split_beat context, time_start, time_length, comps.elements.size
+		end    
+
+    }
+  end
+
+  rule dotted_composites
+    space? comps:(composite+ space?)+ {
+
+		def propagate_timings(context, time_start, time_length)
+			comps.split_beat_dotted context, time_start, time_length, comps.elements.size
+		end    
+
+    }
+  end
+
+  rule reverse_dotted_composites
+    space? comps:(composite+ space?)+ {
+
+		def propagate_timings(context, time_start, time_length)
+			comps.split_beat_reverse_dotted context, time_start, time_length, comps.elements.size
+		end    
+
+    }
+  end
+
+  #see if you can override the split methods here
+  rule composite
+    chord / rest / even_composite / reverse_dotted_composite / dotted_composite
+  end
+  
+  # distributes time evenly
+  rule even_composite
+    octave_designation? '(' octave_designation? even_composites? octave_designation? ')' octave_designation? <EvenCompositeNode>
+  end
+
+  # by default distributes time as 75 25, 75 25, etc
+  # but this can be customized. could even be 25 50 25, 25 50 25, etc
+  rule dotted_composite
+    octave_designation? '[' octave_designation? dotted_composites? octave_designation? ']' octave_designation?	<DottedCompositeNode>
+  end
+
+  rule reverse_dotted_composite
+    octave_designation? '~[' octave_designation? reverse_dotted_composites? octave_designation? ']' octave_designation?	<ReverseDottedCompositeNode>
+  end
+  
+  rule chord
+    (octave_designation? (instachord_start / instachord_end / instachord / note_start / note_end / note))+ <ChordNode>
+  end
+
+  
+  #these cases cannot be followed by a note: A7, Am7
+  #these cases can be followed by a note: Am, A/G, A7/G, A/, Am/G, Am7/G
+  # expressed here: 	[a-gA-G] accidental? (instachord_type? figures !note) / instachord_type 
+  # / (instachord_type? figures? chord_slash ([a-gA-G] accidental?)?) 
+  #because the figures in instachords can be confused with
+  #octave nums, this must be parsed first
+
+  rule instachord
+	[a-gA-G] accidental? ((instachord_type? figures? instachord_bass) / (instachord_type figures?) / (instachord_type? figures !note) ) <InstaChordNode>
+  end
+
+
+  rule instachord_start
+	[a-gA-G] accidental? ((instachord_type? figures? instachord_bass) / (instachord_type figures?) / (instachord_type? figures !note) ) '!' <InstaChordStartNode>
+  end
+
+  rule instachord_end
+	[a-gA-G] accidental? ((instachord_type? figures? instachord_bass) / (instachord_type figures?) / (instachord_type? figures !note) ) '*' <InstaChordEndNode>
+  end
+  
+  rule figures
+	([0-9] accidental?)+
+  end
+  
+  rule instachord_type
+	':' / [mM] [iI] [nN] / [mM] [aA] [jJ] / [mM] /
+	[hH] [dD] [iI] [mM] / [dD] [iI] [mM] / [dD] [oO] [mM] / 
+	[sS] [uU] [sS] / [aA] [uU] [gG]  
+  end
+  
+  rule instachord_bass
+	'/' octave_designation? [a-gA-G]? accidental?
+  end
+  
+  rule note
+      [a-gA-GxX] accidental? <NoteNode>
+  end
+
+  rule note_start
+    [a-gA-GxX] accidental? '!' <NoteStartNode>
+  end
+
+  rule note_end
+    [a-gA-GxX]? accidental? '*' <NoteEndNode>
+  end
+  
+  rule accidental
+    ('=' / '+' / '-')+
+  end
+
+  rule octave_designation
+    octave / octave_shift 
+  end
+
+  rule octave
+    [0-9] <OctaveNode>
+  end
+
+  rule octave_shift
+    ('<' / '>' / 'o' / 'O')+ <OctaveShiftNode>
+  end
+  
+  rule rest
+    octave_designation? '.' octave_designation?
+  end
+
+  rule space
+    (' ' / '	' / '_')+
+  end
+  
+  rule barline
+    space? octave_designation? ('|') octave_designation? space? <BarlineNode>
+  end
+  
+  rule metaremarks
+    ('"' metaremark '"' space?)+
+  end
+
+  rule metaremark
+    metaremark_char* <MetaRemarkNode>
+  end
+  
+  rule metaremark_char
+    !'"' .
+  end
+  
+end

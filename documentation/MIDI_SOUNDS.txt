@@ -1,0 +1,194 @@
+	# General MIDI programs
+		#PIANO                           
+	Acoustic_Grand = 0
+	Bright_Acoustic = 1
+	Electric_Grand = 2
+	Honky_Tonk = 3
+	Electric_Piano_1 = 4
+	Electric_Piano_2 = 5
+	Harpsichord = 6
+	Clavinet = 7
+		#CHROMATIC PERCUSSION
+	Celesta = 8
+	Glockenspiel = 9
+	Music_Box = 10
+	Vibraphone = 11
+	Marimba = 12
+	Xylophone = 13
+	Tubular_Bells = 14
+	Dulcimer = 15
+		#ORGAN                          
+	Drawbar_Organ = 16
+	Percussive_Organ = 17
+	Rock_Organ = 18
+	Church_Organ = 19
+	Reed_Organ = 20
+	Accoridan = 21
+	Harmonica = 22
+	Tango_Accordian = 23
+		#GUITAR
+	Nylon_String_Guitar = 24
+	Steel_String_Guitar = 25
+	Electric_Jazz_Guitar = 26
+	Electric_Clean_Guitar = 27
+	Electric_Muted_Guitar = 28
+	Overdriven_Guitar = 29
+	Distortion_Guitar = 30
+	Guitar_Harmonics = 31
+		#BASS
+	Acoustic_Bass = 32
+	Electric_Bass_Finger = 33
+	Electric_Bass_Pick = 34
+	Fretless_Bass = 35
+	Slap_Bass_1 = 36
+	Slap_Bass_2 = 37
+	Synth_Bass_1 = 38
+	Synth_Bass_2 = 39
+		#SOLO_STRINGS
+	Violin = 40
+	Viola = 41
+	Cello = 42
+	Contrabass = 43
+	Tremolo_Strings = 44
+	Pizzicato_Strings = 45
+	Orchestral_Strings = 46
+	Timpani = 47
+		#ENSEMBLE
+	String_Ensemble_1 = 48
+	String_Ensemble_2 = 49
+	SynthStrings_1 = 50
+	SynthStrings_2 = 51
+	Choir_Aahs = 52
+	Voice_Oohs = 53
+	Synth_Voice = 54
+	Orchestra_Hit = 55
+		#BRASS
+	Trumpet = 56
+	Trombone = 57
+	Tuba = 58
+	Muted_Trumpet = 59
+	French_Horn = 60
+	Brass_Section = 61
+	SynthBrass_1 = 62
+	SynthBrass_2 = 63
+		#REED
+	Soprano_Sax = 64
+	Alto_Sax = 65
+	Tenor_Sax = 66
+	Baritone_Sax = 67
+	Oboe = 68
+	English_Horn = 69
+	Bassoon = 70
+	Clarinet = 71
+		#PIPE
+	Piccolo = 72
+	Flute = 73
+	Recorder = 74
+	Pan_Flute = 75
+	Blown_Bottle = 76
+	Skakuhachi = 77
+	Whistle = 78
+	Ocarina = 79
+		#SYNTH_LEAD
+	Lead_1= 80
+	Lead_2 = 81
+	Lead_3 = 82
+	Lead_4 = 83
+	Lead_5 = 84
+	Lead_6 = 85
+	Lead_7 = 86
+	Lead_8 = 87
+		#SYNTH_PAD
+	Pad_1 = 88
+	Pad_2 = 89
+	Pad_3 = 90
+	Pad_4 = 91
+	Pad_5 = 92
+	Pad_6 = 93
+	Pad_7 = 94
+	Pad_8 = 95
+		#SYNTH_EFFECTS
+	FX_1 = 96
+	FX_2 = 97
+	FX_3 = 98
+	FX_4 = 99
+	FX_5 = 100
+	FX_6 = 101
+	FX_7 = 102
+	FX_8 = 103
+		#ETHNIC
+	Sitar = 104
+	Banjo = 105
+	Shamisen = 106
+	Koto = 107
+	Kalimba = 108
+	Bagpipe = 109
+	Fiddle = 110
+	Shanai = 111
+		#PERCUSSIVE
+	Tinkle_Bell = 112
+	Agogo = 113
+	Steel_Drums = 114
+	Woodblock = 115
+	Taiko_Drum = 116
+	Melodic_Tom = 117
+	Synth_Drum = 118
+	Reverse_Cymbal = 119
+		#SOUND_EFFECTS
+	Guitar_Fret_Noise = 120
+	Breath_Noise = 121
+	Seashore = 122
+	Bird_Tweet = 123
+	Telephone_Ring = 124
+	Helicopter = 125
+	Applause = 126
+	Gunshot = 127
+	
+	# Drum note numbers
+	Acoustic_Bass_Drum = 35
+	Bass_Drum_1 = 36
+	Side_Stick = 37
+	Acoustic_Snare = 38
+	Hand_Clap = 39
+	Electric_Snare = 40
+	Low_Floor_Tom = 41
+	Closed_Hi_Hat = 42
+	High_Floor_Tom = 43
+	Pedal_Hi_Hat = 44
+	Low_Tom = 45
+	Open_Hi_Hat = 46
+	Low_Mid_Tom = 47
+	Hi_Mid_Tom = 48
+	Crash_Cymbal_1 = 49
+	High_Tom = 50
+	Ride_Cymbal_1 = 51
+	Chinese_Cymbal = 52
+	Ride_Bell = 53
+	Tambourine = 54
+	Splash_Cymbal = 55
+	Cowbell = 56
+	Crash_Cymbal_2 = 57
+	Vibraslap = 58
+	Ride_Cymbal_2 = 59
+	Hi_Bongo = 60
+	Low_Bongo = 61
+	Mute_Hi_Conga = 62
+	Open_Hi_Conga = 63
+	Low_Conga = 64
+	High_Timbale = 65
+	Low_Timbale = 66
+	High_Agogo = 67
+	Low_Agogo = 68
+	Cabasa = 69
+	Maracas = 70
+	Short_Whistle = 71
+	Long_Whistle = 72
+	Short_Guiro = 73
+	Long_Guiro = 74
+	Claves = 75
+	Hi_Wood_Block = 76
+	Low_Wood_Block = 77
+	Mute_Cuica = 78
+	Open_Cuica = 79
+	Mute_Triangle = 80
+	Open_Triangle = 81

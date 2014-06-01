@@ -1,0 +1,10 @@
+#. A7/G! * x | d/f+  dm6+/f=| A/E E-dim | D/ D/C | <G7 >Am7/G
+
+#| dm8 d6 | d9 em7 | a E-dim 
+
+#| D/ D/C | <G7 >Am7/G | C7/4b- A7/A
+
+"tempo:50" 
+
+|dmaj Bm7 em A7 | d/ Bm f+m! * | x gmaj a7 bm | (em/g a/) d6/f+
+

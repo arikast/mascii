@@ -1,0 +1,5 @@
+"tempo:180 key:+CM feel:70"
+"tempo:180 key:+CM feel:25"
+
+. . 5G!| e* 			| d=G 			| (. [FG B]) [FA FG] Fd 	|  (. [FG B]) [FA FG] Ec |
+.  | <C! >Gce Gce* 	| <D! >D+Ac DAc* 	| <G! >Gd Gd* 				| C! Gd Gc* |

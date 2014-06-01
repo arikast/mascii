@@ -1,0 +1,31 @@
+"key:fm tempo:200 instrument:12 transpose:0"  
+"key:fm tempo:200 instrument:12 transpose:0"
+
+	| . . . 5c | c d B= c e d c d B c f+ g  |
+	|     .    | 4E= g c     B- g c			|
+
+"2"	| c d B= c e d c d B c a f  | e= f e d+ e g >B c B A= B d- |
+	| F a c         A- a c		| G b e= d- b e |
+
+"4"	| c d c B= c G A B- A G A E= 	| F G F E= F C D E- D <c d B= | 
+	| F a f         A- a f			| 2b 4d G 		F d G |
+
+"6"	| c d c B= c G  A B- A G A F	| E= G B d e= g b >d c B A G |
+	| C c A 			F c A		| C e= B 		 G e G		  |
+	
+"8" | B c A G A F E= G F E F D 		| <c d B= c e d c d B c f+ g  |
+	| F a c 		  A f d			| 4E= g c         B- g c			|
+	
+"10"| c d B= c e d c d B c a f  | e f e d= e g >B c B A= B f
+	| F a c         A- a c		| G b e- d- b e |
+	
+"12"| e f e d= e B= c d- c B C G 	| A B A G A E= F G F E F D |
+	| A a e c a e 					| D f B A f B |		
+	
+"14"| <c d B G A B c d e f g a 	| g a f e f d c d B c F G |
+	| E e c A e c 				| E e d G e d |
+	
+"16"| A (ca .)|
+	| <A (a	.)|
+	
+	

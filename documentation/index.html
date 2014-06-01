@@ -1,0 +1,446 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <title>all about mascii</title>
+    <link href="css/main.css" media="screen" rel="stylesheet" type="text/css" />
+    </style>
+  </head>
+  <body>
+
+<div id="header">
+Mascii: (musical ascii).
+</div>Mascii version 1.0
+<h1>INTRODUCTION</h1>
+<P>Mascii is a robust musical notation system that lets you easily input music using plain ASCII text from any standard computer keyboard, and is designed to be easily understood by humans and computers alike.  </P>
+<P>The design goals for mascii were that it should be compact, chromatic, polyphonic, rhythmically expressive, and generally expressive, in that any combination of pitches and rhythms that can be notated in standard western music notation should be writable in mascii too.  Basically, the litmus test for mascii was that I should have no trouble writing the Brandenburg Concertos in it.
+</P>
+<P>Mascii is in a similar league with GNU Lilypond, and the ABC music notation language.  However, mascii's unique rhythmic system gives it a simplicity and versatility not found in the other two languages, while Lilypond contains many specialized type-setting instructions not found in Mascii.  Lilypond is aimed at the publisher, while Mascii is aimed at the composer.
+</P>
+<P>Another natural comparison might be to MusicXML.  Unlike MusicXML, however, a primary design goal of mascii was that it should be easy to read and write in an ordinary text editor; thus it is considerably more terse than MusicXML.
+</P>
+
+<P>
+There is a free implementation of the mascii specification available for general use created by Ari Kast.
+</P>
+
+
+<P>Here is how Mascii works:
+</P>
+<h1>PITCHES &amp; ACCIDENTALS</h1>
+
+<P>Pitch notation follows standard western music practice.  Notes are named c d e f g a b, and are taken from the currently active octave.  To "shift" into another octave, write a number before the note indicating its octave, and all subsequent notes will be in the new octave.  Starting at the lowest C on the piano, and going up by octaves you have:
+</P>
+<P>1c 2c 3c 4c 5c 6c 7c
+</P>
+<P>So for example:
+</P>
+<P>
+<pre class="masciicode">
+| 2c c f g | e e d 1g | 2c |
+</pre>
+plays as: 
+<pre class="masciicode">
+| 2c 2c 2f 2g | 2e 2e 2d 1g | 2c |
+</pre>
+</P>
+<p>The dividing line where one octave ends and the next one starts is between "b" and "c".  In other words, 3b and 4c are right next to each other.</p>
+
+<P>Using a number shifts the octave in an absolute way.  To shift octaves in a relative way, use the "&lt;" and "&gt;" symbols.  "&lt;" shifts down and octave while "&gt;" shifts up an octave (and "&gt;&gt;" shifts up two octaves, etc).
+</P>
+So
+
+<P>
+<pre class="masciicode">
+| 2f e g &gt;g | e d c . |
+</pre>
+ plays as: 
+ <pre class="masciicode">
+| 2f 2e 2g 3g| 3e 3d 3c . |
+</pre>
+</P>
+<P>At the start of a piece, if no octave is specified, "4" is assumed.  4c is also known as "middle c".  The note just below 4c is 3b, and the diatonic note above is 4d (that's of course not counting the black c sharp note in between 4c and 4d).
+</P>
+<P>Finally, one more notational convenience: notes written in CAPITAL are played one octave lower than written.  They do not shift the currently active octave, they merely play themselves an octave lower than otherwise indicated.  This saves you from having to put octave specifiers all over the place.  For example:
+<pre class="masciicode">
+| f d g G | c A G B | c |
+</pre>
+plays as:
+<pre class="masciicode">
+| 4f 4d 4g 3g| 4c 3a 3 g 3b| 4c
+</pre>
+</P>
+<P>By default, notes are assumed to be natural to the key of the piece.<br/>
+To raise a note (sharp), put a plus "+" after the note.<br/>
+To lower (flat) postfix it with a minus "-"<br/>
+To naturalize explicitly (i.e. cancel a sharp or flat) use an equal "=".<br/>
+Sharps, flats, and naturals remain in effect for the duration of the measure in which they are defined.
+</P>
+<P>d+ means d sharp<br/>
+d- means d flat<br/>
+d= means d natural<br/>
+</P>
+Double sharps and flats are also supported.
+
+<h1>MEASURES, or PULSES</h1>
+
+<P>Mascii takes a unique approach to rhythmic notation.  Other systems try to emulate standard written music, which itself is unnecessarily complex and redundant when it comes to rhythmic notation.  Thus other systems inherit these problems, only they become even worse when exposed by the brevity demanded by a text-based notation system.  Mascii takes an innovative and novel approach instead.
+</P>
+<P>Measures are indicated using the pipe "|" character.  Here is one measure:
+<pre class="masciicode">
+| c e c d |
+</pre>
+</P>
+<P>As in traditional notation, measures represent a constant fixed unit of time. What is unique in mascii is that measures are always divided evenly  over the number of elements inside, so each element gets an equal split of the measure's time.  The more elements there are in the measure, the less time each element occupies.  Therefore notes are in a sense not explicitly assigned a fixed rhythmic value as in other systems, but rather rhythmic values are determined dynamically relative to the other notes or elements in the measure.  This allows for efficient and flexible rhythmic notation without any compromise in notational accuracy (on the contrary, this actually leads to increased accuracy).
+</P>
+<P>Elements are always separated by spaces, and in this case above, all the elements are notes.  The above measure contained 4 quarter notes, because there were 4 elements inside each measure, thus each element took 1/4 of the total time, thus they became quarter notes.
+</P>
+<P>These are half notes:
+<pre class="masciicode">
+| d c |
+</pre>
+Two elements means this measure is divided into two, thus these become half notes.
+</P>
+<P>And these are still half notes, because there are still only two elements in this measure:
+<pre class="masciicode">
+| d gec |
+</pre>
+The second element, "gec", consists of three notes, which are played simultaneously (in other words, a chord).
+</P>
+<P>So far we have only seen notes, but elements can be one of three things:
+<ol>
+<li>a note (or a chord) consisting of one or more simultaneous notes ("f", "d", "ce", etc) </li>
+<li>a rest, denoted by the period "."</li>
+<li>a grouping of other elements, indicated by a pair of parentheses "( )". This is called a composite.  Composites contain one or more elements inside their parentheses, so a composite is a way of grouping one or more elements into a single larger element in the rhythmic scheme.</li>
+</ol>
+</P>
+<P>Rests are indicated by a period ".", and they are full-fledged elements, so they get an even time slice just like notes and composites do.
+</P>
+<P>For example, a quarter note on the 2nd beat followed by two more empty beats looks like this:
+<pre class="masciicode">
+| . a . . |
+</pre>
+Again, why was it a quarter note?  Because there were 4 elements, so each element gets 1/4 of the time.
+</P>
+
+<h1>SUBDIVIDING THE BEAT</h1>
+
+<P>Here are triplets spread evenly over a measure:
+<pre class="masciicode">
+| c d c |
+</pre>
+Since there are three elements in this measure, each element gets 1/3 of the measure's time; thus, triplets. Notice how easy that is!  Traditional notation gets flustered when it comes to anything "outside the box" like triplets.  Similarly, any other tuplets are just as easy to write.
+</P>
+<P>But now what if we do not want triplets; how do we specify that | c d c | should be two quarters and then a half note, rather than three equal thirds?  This is where we use the third element type introduced earlier: a composite.
+</P>
+<P>The trick is that anything enclosed in parentheses gets grouped into a single element in the rhythm scheme, which then takes a single share of time just like any other single element.  The time given to that composite element is then distributed evenly to all its sub-elements (the elements being grouped together), dividing itself into equal portions as usual.
+</P>
+<P>So two quarters followed by a half note looks like this:
+<pre class="masciicode">
+| (f g) a |
+</pre>
+</P>
+
+<P>How did that work?  Well without the parentheses, this measure would contain three elements, and thus would be triplets.
+</P>
+<P>But by using the parentheses we've grouped together the "f" and "g" into a single composite element, so therefore this measure now contains just two top-level elements: a composite "()" and a note "a".
+</P>
+<P>Because elements are always given even time, this means each top-level element is a half note. So the composite element occupies a half-note, and the "a" occupies a half note.  But the composite element merely distributes its allotted time to its contained elements.  In this case, it contains two elements, which are both notes: "f" and "g".  Therefore, again distributing time evenly to all the contained elements, the "f" and "g" each take half of the time, in this case half of a half note, meaning that they are quarter notes.
+</P>
+
+<P>Here is a quarter note, triplet eighths, and then 2 more quarters:
+<pre class="masciicode">
+| c (c b a) g g |
+</pre>
+</P>
+<P>Here's a triplet rhythm consisting of a rest and two 8ths, then a regular quarter:
+<pre class="masciicode">
+| (. a a) a |
+</pre>
+</P>
+<P>Here is an 8th, two 16ths, two more 8ths, and two quarters, followed by a whole note:
+<pre class="masciicode">
+| (e (f e)) (d f) e d | c |
+</pre>
+</P>
+<P>Let's analyze that.  This piece has two measures.  The first measure contains four top-level elements:<br/>
+1: (e (f e))<br/>
+2: (d f)<br/>
+3:  e<br/>
+4:  d<br/>
+</P>
+<P>Therefore each element gets one-fourth of the time, i.e. quarter notes. The first element is itself a composite, containing two elements: "e" and another composite "(f e)".  Therefore each of these two subelements gets half of the time, so half of 1/4 = 1/8th notes. Thus the first subelement, "e", is an eighth note.
+</P>
+<P>But the second subelement, the "(f e)", is itself yet again another composite, consisting of two sub-elements, both notes: "f" and "e".  So again dividing evenly, these become 1/16th notes.
+</P>
+<P>Top-level element number two is a composite consisting of two elements, so dividing the quarter in two, the "d" and "f" become 1/8th notes.  Elements 3 and 4 are each just notes (not composites), so they each fill their full time slot, and are thus 1/4 notes.
+</P>
+<P>Finally, the second measure has just one element, so it takes the entire measure -- it's a whole note.
+</P>
+<P>Here's the tune "it's beginning to look a lot like Christmas" in G:
+<pre class="masciicode">
+| . . B c | (d e d) (c+ . d) e g | b d . . |
+</pre>
+</P>
+
+<P>See the triplets in action?
+</P>
+<P>Here is Mary Poppins' "Chim chim-n-ey, chim chim-n-ey, chim chim, che-roo" song:
+<pre class="masciicode">
+| c (g g) g | B (g g) g | B- a- (. g) | f |
+</pre>
+</P>
+
+<P>Here is how some common time signatures look in Mascii:</P>
+<P>
+6/8   looks like:   | (. . .) (. . .) |<br/>
+3/4   looks like:   | . . . |<br/>
+2/4   looks like:   | . . |<br/>
+</P>
+<P>I used rests in writing these, but of course notes could have just as easily been used.
+</P>
+<P>When using Mascii, it can be artistically liberating to not think too literally about what the equivalent standard notational note equivalents would be, because in some cases it might require something rather ugly to express what you're thinking using conventional old-fashioned notation. Instead, you can simply focus on the time over which your notes must be evenly divided, and let mascii worry about the nitty-gritty fractions and mathematics.
+</P>
+<P>Ultimately three quarter notes in 3/4 time is the same as three eighth notes in 3/8 time, and yet traditional notation uses different symbols for these values -- very silly.  So mascii clears out the notational push-ups and gets down to what actually matters to a musician -- how many of these notes do I have to fit into my beat?
+</P>
+<P>Mascii achieves this without losing any precision or expressiveness -- in fact mascii notation is more rhythmically precise than traditional music, because traditional music has a very hard time with "3 on 4" type cross rhythms -- they are as a rule not written accurately.  After all, what does "three 8ths in the space of two" mean?  They really are no longer eighths then, but in fact some other fraction which is too complicated to express (technically they become twelvths, which cannot be written in standard music notation).  But by avoiding fixed rhythmic values, mascii elegantly bypasses this whole conundrum and handles such rhythms with ease, clarity, and precision, without resorting to notational "fudging".
+</P>
+
+<h1>EXTENDING A NOTE</h1>
+
+<P>Note duration is always determined by slicing the number of elements in a measure or composite space as described earlier.  There are no explicit "whole" or "half" or "dotted half" notes as in other systems, even though you can easily match those note durations in Mascii.
+</P>
+<P>The "time-slice" system conveniently takes care of many needs for other note values from other systems, but sometimes you still need a note to last longer than a single allotment.  In such cases, to extend a note beyond its allotted time slice, you must tie a note to another.
+</P>
+<P>Tying notes together in mascii works a little more like MIDI than like standard music notation, in that you only specify the beginning and the end of the note, nothing in between.  To indicate the start of a tied note, put an exclamation after the note to be held (like the note has some audacity to stay past its allotted time!.  Then write another note indicating where it ends, and suffix that note with an asterisk (inspired by the use of an asterisk to denote the release of the sustain pedal in piano music).  A handy abbreviation good for most cases is to leave off the note name at the end and just write a plain bare asterisk, which automatically matches all currently held notes.
+</P>
+<P>For example, here is a note sequence of quarter, half (written as two quarters tied together), quarter, written in the formal way:
+<pre class="masciicode">
+| d f! f* d |
+</pre>
+</P>
+
+<P>Analysis: This measure has four elements, so they are quarter notes. The second element, "f!" indicates that the note should be held, until the matching element, "f*", indicates the ending portion of this note.  After the third element finishes playing (a continuation of the "f" note from before), the "f" is finally released. Therefore this is a quarter note d followed by a half note f, then a quarter note d.
+</P>
+<P>Here is the preferred, abbreviated way to write it:
+<pre class="masciicode">
+| d f! * d |
+</pre>
+</P>
+
+<P>No matter how many notes are being held, a plain asterisk without any specifier ends all actively playing notes, which is most often (but not always of course) what you want in a polyphonic piece.  Use the abbreviated form when possible, which should be most of the time.  But remember that the explicit form is also there when you need it.
+</P>
+
+<P>Here is the basic sketch of the first line of a Jim Morrison song that begins, "Caravan caravan take me away"
+<pre class="masciicode">
+| a b c | d e f | e d c | a . . |
+</pre>
+</P>
+
+<P>Here it is again with more accurate notation using ties to reflect the way he actually sings it:<pre class="masciicode">
+| a (b c!) * | d e f | e d (c c!) | (* a) . . |
+</pre>
+</P>
+
+<h1>META INSTRUCTIONS</h1>
+
+<P>Anything enclosed in quotes "" is not considered an element and does not contain music. This is where you can put extra instructions for how Mascii should interpret your score.
+</P>
+<P>For example, octave transposition, key signatures, and tempo markings go here. Meta instructions apply to all subsequent bars until explicitly cancelled.
+</P>
+<P>A "key signature" for example looks like this:
+<pre class="masciicode">
+"key:D"| c d e f |
+</pre>
+Or using the relative minor key:
+<pre class="masciicode">
+"key:Bm"| c d e f |
+</pre>
+
+both examples translate to:
+<pre class="masciicode">
+| c+ d e f+ |
+</pre>
+</P>
+
+Within the quotes, multiple meta instructions are separated by spaces.
+Other meta instructions include:
+<pre class="masciicode">
+"tempo:150 time:3/4 instrument:24 feel:80 track:2"
+</pre>
+
+<dl>
+<dt>key</dt> <dd>The key signature of your piece.  C means C major, Cm means C minor.</dd>
+<dt>instrument</dt> <dd>Refers to the General Midi patch number.  Change this to get a different sound.  Can be specified separately for each track.</dd>
+<DT>feel</DT> <DD>A value from 10 to 100 indicating how much to truncate each note.  A feel of 60
+for instance gives a somewhat staccato or "bouncy" feeling as each note will only sound for 60% as long as it otherwise would.  This has no impact on when notes begin, only on when they end.</DD>
+<dt>tempo</dt> <dd>The speed at which your piece is played.</dd>
+<dt>time</dt> <dd>This is mainly useful for sheet music layout purposes.  While mascii does not require a time signature, traditional notation still does, so specifying one helps your sheet music look better.  Note: due to the limitations of MIDI, this can currently only be specified once at the start of a piece.</dd>
+<DT>channel</DT> <DD>This lets you specify which midi channel you're writing to (midi has 16 channels).  Normally you don't need to think about or specify this, but if you explicitly want to control which channel you write to (to use the drums on channel 10 for instance) this is how you do it. </DD>
+</dl>
+
+<h1>Free form comments</h1>
+# at the start of any line causes Mascii to completely ignore that line as if it had not been typed at all.
+So these two musical snippets are completely identical in every way:
+<pre class="masciicode">
+| c c g g | (a a) g |
+</pre>
+same as:
+<pre class="masciicode">
+# this tune is called "twinkle, twinkle" and in F would look like this:
+# | F F c c | (d d) c |
+# any line starting with # is completely ignored
+| c c g g | (a a) g |
+</pre>
+
+
+<h1>POLYPHONY</h1>
+
+<P>There are two ways to handle polyphony: you can mash together multiple notes on the same line,  or you can use separate lines for each "voice". Even when using separate lines for each voice, each separate line can still mash multiple notes together whenever needed.
+</P>
+<P>Any two consecutive lines without a break in between are interpreted as simultaneous lines, i.e. polyphony. In such cases, matching up the barlines is a nice visual convention but not strictly required.
+</P>
+
+<P>When writing an unaccompanied melody it is important to remember to double space the written lines so that lines appearing above one another are played in sequence and not simultaneously.
+</P>
+
+Here is the melody and bass line to Handel's "Gloria", on separate lines, played in the key of B-flat:
+
+<pre class="masciicode">
+"key:b-" | 5f! *  (g f) (e d) | e!  * (f e) (d c) |
+"key:b-" | .   d   B=    G    | .   c  A     F    |
+
+| d!   * (e d) (c B)  | c!   (*  F)  F *   |
+| .   B-  E     G     | F     &lt;F     f   e |
+</pre>
+
+Now here is "Gloria" mashed together into a single line:
+
+<pre class="masciicode">
+"key:b-"| 5f! *D (g f)4B= 5(e d)4G | 5e! *C (f e)4A 5(d c)4F | 
+
+| 5d! *4B- 5(e d)4E 5(c B)4G | 5c!4F (* 4f)3F 4f!3f *e | 
+</pre>
+
+<P>Notice the double-spaced lines.  The empty space in between the two lines lets mascii know that the second line is in fact just a continuation of the first, not a separate voice to be played simultaneously. </P>
+<P>
+There is also something subtle here worth mentioning... notice in the first bar that the asterisk "*" comes BEFORE the D.  If it came after the D, it would be interpreted as "D*", which is not what I wanted -- D* would indicate the end of a held D note, but what I wanted was to end the f.  The syntax to end an f is f*, so I could have written Df* or f*D, but since there's only one note being held anyway I can just use the universal * without specifying which note it applies to, but in this case the * must go at the beginning, before -- not after -- the D, to avoid any confusion.
+</P>
+
+<h1>ADVANCED FEATURES</h1>
+<h3>Uneven Time Splits</h3>
+<P>Because dotted rhythms are such a common occurence, Mascii allows for non-even time division among elements.
+</P>
+<P>Elements enclosed in parentheses () are each given equal slices of time as described earlier.<br/>
+Elements enclosed in brackets [] and braces {} are given UNEQUAL time slices, as follows:
+</P>
+<P>By default, elements in brackets [] are effectively rhythmically "dotted", by using this time distribution formula: Element 1 gets a half-portion more time than it would normally receive, and element 2 gets a half-portion less time than it would normally receive.  Element 3 gets a half-portion more, element 4 gets a half-portion less, etc.  Another way to say this is that the ratio of each element to the next, which normally would be a series of 50/50, 50/50, etc, now becomes 75/25, 75/25, etc.  Thus this sequence of quarter notes:
+</P>
+<pre class="masciicode">
+| a b c d |
+</pre>
+
+<P>Becomes a dotted quarter, followed by an eighth, then another dotted quarter, and finally another eighth, by writing it in brackets like this:
+<pre class="masciicode">
+| [a b c d] |
+</pre>
+</P>
+
+<P>Or alternately like this:
+<pre class="masciicode">
+| [a b] [c d] |
+</pre>
+</P>
+<P>To reverse a time split, precede it with a tilde ~.  So ~[] is the reverse of [].  Therefore ~[] by default causes the time distribution to become 25/75, rather than 75/25.
+</P>
+<P>I mention the word "default" because these time splits can be customized:
+<pre class="masciicode">
+"[]:67/33"| [C f] g g | a |
+</pre>
+This causes the C and f to split 67/33.  For conceptual convenience, I have notated the split as a percentage of 100, but this is not necessary -- all that matters is the ratio expressed.  So the above split could also be approximated by writing "[]:2/1".  
+</P>
+<P>Futhermore, you also are not limited to two-element splits; you can customize multi-element splitting like this:
+<pre class="masciicode">
+"[]:25/50/25"| [a d c] |
+</pre>
+This effectively makes the a and c into quarter notes, while the d in the middle becomes a half note. Any additional elements would cycle through the same pattern.
+</P>
+
+<P>Multi-element splitting can be useful for a rhythmic track or applying a repeating rhythmic motif to a recurring bass pattern, but extensive use in ordinary music becomes challenging for humans to read, so its use should be reserved for when it is truly needed.
+</P>
+
+<h3>Chord Symbols</h3>
+<P>Mascii includes some support for pop chords (aka "slash chords"). This area of the spec is relatively new and may undergo revision in the future.
+</P>
+<P>Chords work basically as you'd expect them to, and rhythmically work just like any other element: 
+</P>
+<pre class="masciicode">
+| A/ F+m7 Bm7 Eaug | C+hdim F+m &lt;Bm c=dim7 | A6 | 
+</pre>
+
+<P>Remember that in Mascii a plus + indicates a sharped note or figure, and it is NOT shorthand for an augmented chord.  
+</P>
+<P>Whenever there is ambiguity as to whether a number is part of a chord or is an octave specifier, its role as a potential octave specifier always wins.  Therefore A7 is a chord, but A7B is the notes A and 7B.  To specify an A7 chord with a B, you can write (A7)B or BA7, or even A72 or A9.  You can also use slash notation like so: A7/B, but slash notation introduces some complexity as described below.
+</P>
+<P>By default chords play in root position.  To play an inversion of a chord, you may specify its bass note using "slash chord" notation, like this:</P>
+
+<pre class="masciicode">
+A7/G 
+</pre>
+<p>
+The above chord has specified that its bass note should be a G, so mascii therefore rearranges the A7 chord to produce an inversion where G is the lowest note.
+</p>
+
+<p>Octave designations always apply to the lowest note of the chord.  In root position, the root of a chord is its lowest note, so when we write 5Am, the octave designation "5" applies to the root of this A minor chord, which is A.  </p>
+
+<p>However, when an explicit bass note is included using slash chord notation, the given bass note now becomes the fixed anchor to which the octave designation applies, and the other notes of the chord, including the root, will adjust their octaves to fit above this bass note.  So when thinking of octave designations, you should always specify them for the lowest note of your chord.  The lowest note is normally the root, but when you specify an inversion using the "slash bass" notation, then the lowest note is the bass note specified after the slash.</p>
+
+<p>For example, if we write a D chord like this:</p>
+
+<pre class="masciicode">
+5d/
+</pre>
+
+<P>No explicit bass was given, therefore this chord is in root position, and d will be its lowest note.  Therefore, the octave designation "5" applies to the d.
+</P>
+
+<P>However if we specify a bass note like so:
+</P>
+<pre class="masciicode">
+5d/a
+</pre>
+
+<P>This is equivalent to writing this:
+</P>
+<pre class="masciicode">
+d/5a
+</pre>
+
+<P>In other words, the octave designation now applies to the given "a" bass note, which is the lowest note of the chord.  That means that in order to have "5a" as its lowest note, the root "d" (and any other notes in the chord, in this case f+) must shift into octave 6 in this case.
+</P>
+<P>In practice, this is less complicated than it sounds.  Just remember that whatever octave specifiers are in effect, they always apply to the bass note of the chord when given, and the other notes in the chord will move around to accomodate it.
+</P>
+<P>Also, remember that normal capitalization rules still apply, so dm is different from Dm (Dm will sound one octave lower), and dm/G is different from dm/g (dm/G will sound one octave lower because it starts on G not g).  But there is no difference between dm/g and Dm/g, because these are both d minor chords starting on the same g bass, so they will be constructed in exactly the same way.
+</P>
+
+<h3>X repeats the most recent harmony</h3>
+<P>This is especially useful for repeating chords:
+</P>
+<pre class="masciicode">
+| (A6! * x) x x x | (G+dim7! * x) (. . x!) * . |
+</pre>
+plays as:
+<pre class="masciicode">
+| (A6! * A6) A6 A6 A6 | (G+dim7! * G+dim7) (. . G+dim7!) * . |
+</pre>
+
+
+<h1>TRYING IT OUT</h1>
+A free public implementation of the mascii spec has been created by Ari Kast at kastkode.com.
+
+<div id="footer">
+(c) 2009 Ari Kast.  Questions?  Write to inf<!-- no spam -->o<!-- no spam -->@<!-- no spam -->ma<!-- no spam -->scii<!-- no spam -->.<!-- no spam -->or<!-- no spam -->g
+</div>
+  </body>
+</html>

@@ -1,0 +1,6 @@
+"key:f tempo:120 instrument:0 feel:90 time:3/4"  
+
+| (5g+ a)(F4 A c) (5g a)(4F A c) (5g a)(4F A c) | (6B= c)(4E G c) (6B c)(4E G c) (5b- g)(4E G c) 
+
+| (5g f)3fa (5g f)3a (5a g)C | (5g!e)F (* g+)C (fa)3f |	
+	
