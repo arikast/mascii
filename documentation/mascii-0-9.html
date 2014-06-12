@@ -4,14 +4,67 @@
   <head>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
     <title>all about mascii</title>
-    <link href="css/main.css" media="screen" rel="stylesheet" type="text/css" />
+    <style type="text/css" media="screen">
+      body {
+        padding: 2em;
+        background-color: white;
+        font-family: "Lucida Grande", "Bitstream Vera Sans", "Verdana";
+        font-size: 14px;
+        color: black;
+      }
+      
+      h1 {
+        color: darkblue;
+      }
+      
+      a  {color: #03c}
+      a:hover {
+        background-color: #03c;
+        color: white;
+        text-decoration: none;
+      }
+      
+	  .masciicode {
+		font-family:courier new;
+        background-color: #DDD;
+		margin:1em;
+	  }
+	  
+	  #header {
+		border-bottom: 1px solid black;  
+		color:darkgreen;
+		font-size:250%;
+		font-weight:bold;
+	  }
+
+	  #footer {
+		margin-top:2em;
+		border-top: 1px solid black;  
+		color:darkgreen;
+		font-size:90%;
+	  }
+	  
+	  h1 {
+		font-weight:normal;
+	  }
+	  
+	  h3 {
+		border-bottom: 1px solid black;  
+	  }
+
+	dt {
+		font-weight:bold;
+		margin-top:.25em;
+	}
+	  
     </style>
   </head>
   <body>
 
 <div id="header">
 Mascii: (musical ascii).
-</div>Mascii version 1.0
+</div>
+This describes Mascii v 0.9.  A newer 1.0 version has been released on github at <a href=https://github.com/arikast/mascii">https://github.com/arikast/mascii</a>
 <h1>INTRODUCTION</h1>
 <P>Mascii is a robust musical notation system that lets you easily input music using plain ASCII text from any standard computer keyboard, and is designed to be easily understood by humans and computers alike.  </P>
 <P>The design goals for mascii were that it should be compact, chromatic, polyphonic, rhythmically expressive, and generally expressive, in that any combination of pitches and rhythms that can be notated in standard western music notation should be writable in mascii too.  Basically, the litmus test for mascii was that I should have no trouble writing the Brandenburg Concertos in it.
@@ -22,14 +75,11 @@ Mascii: (musical ascii).
 </P>
 
 <P>
-There is a <a href="https://github.com/arikast/mascii">free implementation</a> of the mascii specification available for general use created by Ari Kast.
+There is a free implementation of the mascii specification available for public use online at <a href="http://composersnotebook.com">composersnotebook.com</a>.
 </P>
 
-<P>
-This document describes mascii 1.0.  For the older 0.9 release click <a href="mascii-0-9.html">here</a>.
-</P>
 
-<P>Here is how Mascii works: (also see the <a href="quickstart.html">quickstart</a> tutorial on the basics of mascii)
+<P>Here is how Mascii works:
 </P>
 <h1>PITCHES &amp; ACCIDENTALS</h1>
 
@@ -207,7 +257,7 @@ Since there are three elements in this measure, each element gets 1/3 of the mea
 </P>
 <P>Ultimately three quarter notes in 3/4 time is the same as three eighth notes in 3/8 time, and yet traditional notation uses different symbols for these values -- very silly.  So mascii clears out the notational push-ups and gets down to what actually matters to a musician -- how many of these notes do I have to fit into my beat?
 </P>
-<P>Mascii achieves this without losing any precision or expressiveness -- in fact mascii notation is more rhythmically precise than traditional music, because traditional music has a very hard time with "3 on 4" type cross rhythms -- they are as a rule not written accurately.  After all, what does "three 8ths in the space of two" mean?  They really are no longer eighths then, but in fact some other fraction which is too complicated to express (technically they become twelvths, which cannot be written in standard music notation).  But by avoiding fixed rhythmic values, mascii elegantly bypasses this whole conundrum and handles such rhythms with ease, clarity, and precision, without resorting to notational "fudging".
+<P>Mascii achieves this without losing any precision or expressiveness -- in fact mascii notation is more rhythmically precise than traditional music, because traditional music has a very hard time with "3 versus 4" type cross rhythms -- they are as a rule not written accurately.  After all, what does "three 8ths in the space of two" mean?  They really are no longer eighths then, but in fact some other fraction which is too complicated to express (technically they become twelvths, which cannot be written in standard music notation).  But by avoiding fixed rhythmic values, mascii elegantly bypasses this whole conundrum and handles such rhythms with ease, clarity, and precision, without resorting to notational "fudging".
 </P>
 
 <h1>EXTENDING A NOTE</h1>
@@ -355,7 +405,7 @@ Elements enclosed in brackets [] and braces {} are given UNEQUAL time slices, as
 | [a b] [c d] |
 </pre>
 </P>
-<P>To reverse a time split, precede it with a tilde ~.  So ~[] is the reverse of [].  Therefore ~[] by default causes the time distribution to become 25/75, rather than 75/25.
+<P>Braces {} by default do the same thing only in reverse.  So braces cause the time distribution to be 25/75, 25/75.
 </P>
 <P>I mention the word "default" because these time splits can be customized:
 <pre class="masciicode">
@@ -440,7 +490,7 @@ plays as:
 
 
 <h1>TRYING IT OUT</h1>
-A free public implementation of the mascii spec has been created by Ari Kast at kastkode.com.
+A free public implementation of the mascii specification has been made available for use online at <a href="http://composersnotebook.com">composersnotebook.com</a>.
 
 <div id="footer">
 (c) 2009 Ari Kast.  Questions?  Write to inf<!-- no spam -->o<!-- no spam -->@<!-- no spam -->ma<!-- no spam -->scii<!-- no spam -->.<!-- no spam -->or<!-- no spam -->g
