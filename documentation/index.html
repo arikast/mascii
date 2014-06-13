@@ -12,7 +12,7 @@
 <div id="header">
 Mascii: (musical ascii).
 </div>Mascii version 1.0
-<h1>INTRODUCTION</h1>
+<a name="intro"></a><h1>INTRODUCTION</h1>
 <P>Mascii is a robust musical notation system that lets you easily input music using plain ASCII text from any standard computer keyboard, and is designed to be easily understood by humans and computers alike.  </P>
 <P>The design goals for mascii were that it should be compact, chromatic, polyphonic, rhythmically expressive, and generally expressive, in that any combination of pitches and rhythms that can be notated in standard western music notation should be writable in mascii too.  Basically, the litmus test for mascii was that I should have no trouble writing the Brandenburg Concertos in it.
 </P>
@@ -31,7 +31,7 @@ This document describes mascii 1.0.  For the older 0.9 release click <a href="ma
 
 <P>Here is how Mascii works: (also see the <a href="quickstart.html">quickstart</a> tutorial on the basics of mascii)
 </P>
-<h1>PITCHES &amp; ACCIDENTALS</h1>
+<a name="pitches"></a><h1>PITCHES &amp; ACCIDENTALS</h1>
 
 <P>Pitch notation follows standard western music practice.  Notes are named c d e f g a b, and are taken from the currently active octave.  To "shift" into another octave, write a number before the note indicating its octave, and all subsequent notes will be in the new octave.  Starting at the lowest C on the piano, and going up by octaves you have:
 </P>
@@ -86,7 +86,7 @@ d= means d natural<br/>
 </P>
 Double sharps and flats are also supported.
 
-<h1>MEASURES, or PULSES</h1>
+<a name="rhythm"></a><h1>MEASURES, or PULSES (RHYTHM)</h1>
 
 <P>Mascii takes a unique approach to rhythmic notation.  Other systems try to emulate standard written music, which itself is unnecessarily complex and redundant when it comes to rhythmic notation.  Thus other systems inherit these problems, only they become even worse when exposed by the brevity demanded by a text-based notation system.  Mascii takes an innovative and novel approach instead.
 </P>
@@ -127,7 +127,7 @@ The second element, "gec", consists of three notes, which are played simultaneou
 Again, why was it a quarter note?  Because there were 4 elements, so each element gets 1/4 of the time.
 </P>
 
-<h1>SUBDIVIDING THE BEAT</h1>
+<h1>SUBDIVIDING THE BEAT (RHYTHM CONT'D)</h1>
 
 <P>Here are triplets spread evenly over a measure:
 <pre class="masciicode">
@@ -210,7 +210,7 @@ Since there are three elements in this measure, each element gets 1/3 of the mea
 <P>Mascii achieves this without losing any precision or expressiveness -- in fact mascii notation is more rhythmically precise than traditional music, because traditional music has a very hard time with "3 on 4" type cross rhythms -- they are as a rule not written accurately.  After all, what does "three 8ths in the space of two" mean?  They really are no longer eighths then, but in fact some other fraction which is too complicated to express (technically they become twelvths, which cannot be written in standard music notation).  But by avoiding fixed rhythmic values, mascii elegantly bypasses this whole conundrum and handles such rhythms with ease, clarity, and precision, without resorting to notational "fudging".
 </P>
 
-<h1>EXTENDING A NOTE</h1>
+<a name="ties"></a><h1>EXTENDING A NOTE</h1>
 
 <P>Note duration is always determined by slicing the number of elements in a measure or composite space as described earlier.  There are no explicit "whole" or "half" or "dotted half" notes as in other systems, even though you can easily match those note durations in Mascii.
 </P>
@@ -246,7 +246,7 @@ Since there are three elements in this measure, each element gets 1/3 of the mea
 </pre>
 </P>
 
-<h1>META INSTRUCTIONS</h1>
+<a name="meta"></a><h1>META INSTRUCTIONS</h1>
 
 <P>Anything enclosed in quotes "" is not considered an element and does not contain music. This is where you can put extra instructions for how Mascii should interpret your score.
 </P>
@@ -283,7 +283,7 @@ for instance gives a somewhat staccato or "bouncy" feeling as each note will onl
 <DT>channel</DT> <DD>This lets you specify which midi channel you're writing to (midi has 16 channels).  Normally you don't need to think about or specify this, but if you explicitly want to control which channel you write to (to use the drums on channel 10 for instance) this is how you do it. </DD>
 </dl>
 
-<h1>Free form comments</h1>
+<a name="comments"></a><h1>Free form comments</h1>
 # at the start of any line causes Mascii to completely ignore that line as if it had not been typed at all.
 So these two musical snippets are completely identical in every way:
 <pre class="masciicode">
@@ -298,7 +298,7 @@ same as:
 </pre>
 
 
-<h1>POLYPHONY</h1>
+<a name="polyphony"></a><h1>POLYPHONY</h1>
 
 <P>There are two ways to handle polyphony: you can mash together multiple notes on the same line,  or you can use separate lines for each "voice". Even when using separate lines for each voice, each separate line can still mash multiple notes together whenever needed.
 </P>
@@ -331,7 +331,7 @@ Now here is "Gloria" mashed together into a single line:
 There is also something subtle here worth mentioning... notice in the first bar that the asterisk "*" comes BEFORE the D.  If it came after the D, it would be interpreted as "D*", which is not what I wanted -- D* would indicate the end of a held D note, but what I wanted was to end the f.  The syntax to end an f is f*, so I could have written Df* or f*D, but since there's only one note being held anyway I can just use the universal * without specifying which note it applies to, but in this case the * must go at the beginning, before -- not after -- the D, to avoid any confusion.
 </P>
 
-<h1>ADVANCED FEATURES</h1>
+<a name="advanced"></a><h1>ADVANCED FEATURES</h1>
 <h3>Uneven Time Splits</h3>
 <P>Because dotted rhythms are such a common occurence, Mascii allows for non-even time division among elements.
 </P>
@@ -373,7 +373,7 @@ This effectively makes the a and c into quarter notes, while the d in the middle
 <P>Multi-element splitting can be useful for a rhythmic track or applying a repeating rhythmic motif to a recurring bass pattern, but extensive use in ordinary music becomes challenging for humans to read, so its use should be reserved for when it is truly needed.
 </P>
 
-<h3>Chord Symbols</h3>
+<a name="chordsymbols"></a><h3>Chord Symbols</h3>
 <P>Mascii includes some support for pop chords (aka "slash chords"). This area of the spec is relatively new and may undergo revision in the future.
 </P>
 <P>Chords work basically as you'd expect them to, and rhythmically work just like any other element: 
@@ -427,7 +427,7 @@ d/5a
 <P>Also, remember that normal capitalization rules still apply, so dm is different from Dm (Dm will sound one octave lower), and dm/G is different from dm/g (dm/G will sound one octave lower because it starts on G not g).  But there is no difference between dm/g and Dm/g, because these are both d minor chords starting on the same g bass, so they will be constructed in exactly the same way.
 </P>
 
-<h3>X repeats the most recent harmony</h3>
+<a name="repeatchords"></a><h3>X repeats the most recent harmony</h3>
 <P>This is especially useful for repeating chords:
 </P>
 <pre class="masciicode">
