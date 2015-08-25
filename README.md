@@ -1,14 +1,14 @@
-## what is this thing?
+## What is this thing?
 This is an implementation of the Mascii text-based music notation standard (see [mascii.org](http://mascii.org)).  This particular implementation reads mascii and outputs midi, thus it is a mascii-to-midi conversion engine.
 
-## setup instructions
+## Setup instructions
 1. install Ruby 2.0 or higher if you don't already have it
     1a. install the RVM ruby management system
     1b. use RVM to install ruby 2.0
 2. gem install treetop
 3. gem install midilib
 
-## how to generate a song
+## How to generate a song
 NOTE: this discusses how to generate midi files locally on your computer.  As an alternative, you'll also soon be able to use the upcoming online services which will be available at [mascii.org](http://mascii.org).
 
 1. Read about mascii syntax in the documentation/ dir or online at [mascii.org](http://mascii.org).  Mascii is a general-purpose music data format designed to be easy to read and type with an ordinary computer.  It is free and open source, and comes distributed with a cross-platform engine which can convert mascii music into midi, for easy audio playback on your computer
@@ -33,7 +33,7 @@ NOTE: this discusses how to generate midi files locally on your computer.  As an
     * On BSD:
         I don't know, never tried running it there, but I'm sure there's a way 
 
-## technical lay of the land
+## Technical lay of the land
 All the meat n potatoes of the mascii engine are in the mascii/ directory.  Here's a tour of some important files there:
 
 #### mascii.treetop 
@@ -53,7 +53,7 @@ The expanded ruby equivalent of the grammar expressed in mascii.treetop.  To gen
 Any core overrides or class tweaks go here.
 
 
-## running tests:
+## Running tests:
 ```ruby
 ruby test-parser.rb
 ruby parser.rb
