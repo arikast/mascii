@@ -1,3 +1,6 @@
+# This version is outdated.  
+Please use the fully revised and improved [Mascii 2](https://github.com/arikast/mascii-quickstart) instead.
+
 ## What is this thing?
 This is an implementation of the Mascii text-based music notation standard (see [mascii.org](http://mascii.org)).  This particular implementation reads mascii and outputs midi, thus it is a mascii-to-midi conversion engine.
 
